@@ -1,0 +1,51 @@
+
+<html>
+<body>
+    <h2>Student Registration</h2>
+
+    Name: <input type="text"><br><br>
+    Roll No: <input type="text"><br><br>
+
+    Course:
+    <select>
+        <option>CSE</option>
+        <option>AIML</option>
+        <option>Data Science</option>
+        <option>ECE</option>
+        <option>EEE</option>
+    </select><br><br>
+
+    Section:
+    <select>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select><br><br>
+
+    <button>Register</button>
+
+    <hr>
+
+    <h2>Student Result Checking</h2>
+
+    Name: <input type="text"><br><br>
+    Marks: <input type="number" id="m"><br><br>
+
+    <button onclick="check()">Check Result</button>
+
+    <p id="r"></p>
+
+    <script>
+        function check() {
+            let m = document.getElementById("m").value;
+
+            if (m == "")
+                document.getElementById("r").innerHTML = "Enter marks";
+            else if (m >= 35)
+                document.getElementById("r").innerHTML = "Pass";
+            else
+                document.getElementById("r").innerHTML = "Fail";
+        }
+    </script>
+</body>
+</html>
